@@ -1,0 +1,378 @@
+.job-info .title {
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 15px;
+    padding-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 30px;
+}
+
+.tr-space {
+    background-color: transparent !important;
+}
+
+.tr-space:hover {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.nodatafound {
+    background-color: #dddddd;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.space {
+    padding: 5px;
+}
+
+table thead tr {
+    background-color: #77A6F7;
+}
+
+tbody tr {
+    background-color: #fff;
+}
+
+tr td {
+    color: #656565;
+    padding: 25px 20px 25px 20px;
+    font-size: 1.5rem;
+}
+
+tbody tr:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+tr th {
+    color: #fff;
+    padding: 25px;
+}
+
+.td-company {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 80%;
+}
+
+.td-company .img {
+    width: 50px;
+    height: 50px;
+}
+
+.td-company span {
+    margin-left: 10px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_design {
+    border: none;
+    background-color: transparent;
+}
+
+.job-info h1 {
+    padding: 10px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.status {
+    border-radius: 3px;
+    font-weight: 900;
+    padding: 0.2rem 1rem;
+    text-align: center;
+    color: #f7f7f7;
+}
+
+.status.application {
+    color: #ffce54;
+    background-color: rgba(255, 206, 84, 0.3);
+}
+
+.status.short-listed,
+.status.reviewed {
+    color: #77A6F7;
+    background-color: rgba(119, 166, 247, 0.3);
+}
+
+.status.approved {
+    color: #a0d468;
+    background-color: rgba(160, 212, 104, 0.3);
+}
+
+.status.disapproved {
+    color: #fc6e51;
+    background-color: rgba(252, 110, 81, 0.3);
+}
+
+.status.cancelled {
+    color: #a3a6ab;
+    background-color: rgba(163, 166, 171, 0.3);
+}
+
+td .eye {
+    color: #4FC0E8;
+}
+
+td .red {
+    color: #e9573f;
+}
+
+td i {
+    font-size: 1.8rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+#cancelModal,
+#deleteModal {
+    margin-top: 10%;
+}
+
+#buts {
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    padding: 5px;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+#buts a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+#buts:hover {
+    background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+.message {
+    background-color: #fff;
+    min-height: 75vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    padding-bottom: 20px;
+}
+
+.jo {
+    background-color: #fff;
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.grid-item h1,
+.jo h1 {
+    font-size: 30px;
+    text-align: left;
+    padding: 20px 40px;
+}
+
+.grid-item h2 {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 40px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.grid-item p {
+    padding-left: 40px;
+    text-align: left;
+}
+
+.grid-item h1 span {
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.jo h1 span {
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 2rem;
+    text-transform: none;
+}
+
+.grid-item .message-icon {
+    padding: 20px;
+}
+
+.grid-item .message-icon img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-bottom: 5px;
+}
+
+#details {
+    text-align: justify;
+}
+
+.grid-item .back {
+    padding-top: 30px;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.back a {
+    color: #a3a6ab;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.back a:hover {
+    color: #17759C;
+}
+
+.availability {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    gap: 20px;
+}
+
+.availability .mylabel {
+    display: block;
+    margin-top: 15px;
+}
+
+.toggle {
+    --width: 40px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #dddddd;
+    transition: background 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill {
+    background: #009578;
+}
+
+.toggle__fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked~.toggle__fill::after {
+    transform: translateX(var(--height));
+}
+
+.responsive-table {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.table-header {
+    background-color: #77A6F7;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    transition: ease-in-out .3s;
+}
+
+.table-row.nodata {
+    background-color: #dddddd;
+}
+
+.table-row:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.col-1 {
+    flex-basis: 25%;
+}
+
+.col-2 {
+    flex-basis: 25%;
+}
+
+.col-3 {
+    flex-basis: 25%;
+}
+
+.col-4 {
+    flex-basis: 25%;
+}
+
+.col-6 {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+@media all and (max-width: 767px) {
+    .table-header {
+        display: none;
+    }
+    li {
+        display: block;
+    }
+    .col {
+        flex-basis: 100%;
+    }
+    .col {
+        display: flex;
+        padding: 10px 0;
+    }
+    .col:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}

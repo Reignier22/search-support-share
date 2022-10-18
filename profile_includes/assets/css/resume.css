@@ -1,0 +1,144 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: radial-gradient(#c7c7c7 25%, #c7c7c7 74%);
+    font-family: system-ui;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.main {
+    height: auto;
+    width: 800px;
+    background-color: white;
+    box-shadow: 5px 7px 15px 5px #b9b6b6;
+    margin: 20px auto;
+}
+
+.top-section {
+    background-color: #77A6F7;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fff;
+}
+
+.div-3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.p1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.p1 span {
+    font-weight: 100;
+    color: #f7f7ff;
+}
+
+.p-info {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 70%;
+}
+
+.col-div-12 {
+    width: 100%;
+}
+
+.content-box {
+    padding: 20px;
+}
+
+.head {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.p3 {
+    color: #7b7b7b;
+    margin-bottom: -5px;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.p3 i {
+    color: #77A6F7;
+    font-size: 1rem;
+}
+
+.print {
+    font-size: 1.5rem;
+    float: left;
+    padding: 10px;
+    color: #7b7b7b;
+    transition: ease-in-out .3s;
+}
+
+.print:hover {
+    font-size: 1.6rem;
+    color: black;
+}
+
+.home {
+    font-size: 1.5rem;
+    float: right;
+    padding: 10px;
+}
+
+.home a {
+    color: #7b7b7b;
+    transition: ease-in-out .3s;
+}
+
+.home a:hover {
+    color: #fff;
+    font-weight: 900;
+}
+
+@page {
+    size: auto;
+    margin: 0mm;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    .main {
+        box-shadow: none;
+        width: 1000px;
+        height: 100%;
+    }
+    .top-section {
+        background-color: #77A6F7 !important;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    .p3 i {
+        font-size: 1.3rem;
+    }
+    .print,
+    .home {
+        display: none;
+    }
+}

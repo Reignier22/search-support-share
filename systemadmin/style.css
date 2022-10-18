@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #28292d;
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(0deg, transparent, #77A6F7, #77A6F7);
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+
+.box::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(0deg, transparent, #77A6F7, #77A6F7);
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text-container {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 35%;
+    padding: 25px;
+    color: #E6E6E6;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.text-container img {
+    width: 70%;
+}
+
+.text-container p {
+    text-align: justify;
+}
+
+.image-side {
+    position: absolute;
+    z-index: 0;
+    top: 12%;
+    right: 20%;
+}
+
+form {
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 2;
+    padding: 50px 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.box-error {
+    display: none;
+    margin-top: 10px;
+    color: #E6E6E6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    background: #23242a
+}
+
+.glowing::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 3px;
+    background: linear-gradient(45deg, #77A6F7, #fff, #00887A);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: glower 20s linear infinite;
+}
+
+@keyframes glower {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 25px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:focus~span,
+.inputBox input:valid~span {
+    color: #77A6F7;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #77A6F7;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:focus~i,
+.inputBox input:valid~i {
+    height: 44px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a,
+.links span {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: beige;
+}
+
+#checkb {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background: transparent;
+    outline: 1px solid #77A6F7;
+    border-radius: 1px;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+
+#checkb:checked {
+    background: #77A6F7;
+}
+
+.links a:hover,
+.links a:nth-child(2) {
+    color: #77A6F7;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 11px 25px;
+    background: #77A6F7;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:active {
+    opacity: 0.8;
+}

@@ -1,0 +1,149 @@
+.grid-container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.grid-item {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.grid-item label {
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+
+.grid-item input,
+.grid-item textarea,
+.grid-item select {
+    width: 100%;
+    border: 2px solid #ccc;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.grid-item input:focus {
+    outline-color: #77A6F7;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.grid-item select:focus {
+    border-color: #77A6F7;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.grid-item textarea:focus {
+    border-color: #77A6F7;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.grid-item input,
+.grid-item select {
+    height: 35px;
+}
+
+.grid-item select {
+    margin-top: 9px;
+}
+
+.grid-item textarea {
+    min-height: 100px;
+    max-height: 500px;
+    resize: none;
+    overflow: hidden;
+}
+
+.grid-item .success {
+    display: none;
+    float: right;
+    padding-left: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
+    color: green;
+}
+
+.grid-item .error {
+    display: none;
+    float: right;
+    padding-left: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
+    color: red;
+}
+
+.errMsg {
+    font-size: 15px;
+    text-align: right;
+    color: red;
+}
+
+.grid-item.button-save {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.grid-item.button-save span {
+    color: #f3f3ff;
+    padding-top: 12px;
+    padding-left: 10px;
+}
+
+.grid-item .save {
+    width: 40%;
+    align-items: center;
+    background-color: #06f;
+    border: 2px solid #06f;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.grid-item .save:focus {
+    color: #171e29;
+}
+
+.grid-item .save:hover {
+    background-color: #3385ff;
+    border-color: #3385ff;
+    fill: #06f;
+}
+
+@media only screen and (max-width: 1124px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+}

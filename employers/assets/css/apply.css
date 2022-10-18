@@ -1,0 +1,96 @@
+.jobs {
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: left;
+}
+
+.info {
+    padding-left: 10px;
+}
+
+.grid-item img {
+    width: 150px;
+    height: 150px;
+}
+
+.grid-item h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.grid-item p {
+    font-size: 1.5rem;
+}
+
+.captions p {
+    font-weight: 700;
+}
+
+.remarks select {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 3px;
+}
+
+#approve,
+#shortlisted,
+#disapproved {
+    display: none;
+}
+
+.message textarea {
+    width: 100%;
+    height: 250px;
+    font-size: 15px;
+    padding-left: 3px;
+}
+
+.message .buttons {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.message .buttons .approved {
+    width: 30%;
+    height: 35px;
+    background-color: #00887A;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+.message .buttons .short {
+    width: 30%;
+    height: 35px;
+    background-color: #ED7D31;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+.message .buttons .disapproved {
+    width: 30%;
+    height: 35px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+.feedback #approved {
+    color: 00887A;
+}

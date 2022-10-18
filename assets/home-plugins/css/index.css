@@ -1,0 +1,269 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+#content {
+    min-height: 400px;
+    color: #000;
+}
+
+.contentbody p {
+    font-weight: bold;
+}
+
+.button {
+    background-color: #00887A;
+    /* Green */
+    border: none;
+    color: white;
+    width: 7em;
+    height: 2.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+    padding-left: 5em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.75em;
+    margin: 0.6em 0;
+    font-weight: 600;
+    color: #070024;
+}
+
+.column {
+    padding: 1em;
+}
+
+#categories {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.div1 {
+    height: 250px;
+    width: 270px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.5px solid #f5f5f5;
+    box-shadow: 0.5px 3px #dedede;
+    transition: 0.5s;
+    align-items: center;
+}
+
+.available {
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    color: #00887A;
+}
+
+.available:hover {
+    color: #77A6F7;
+}
+
+#categories .cat_container .div1 .img_container {
+    margin-left: 55px;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+
+#categories .cat_container .div1 .img_container img {
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100px;
+}
+
+#categories .cat_container .div1 p {
+    padding-top: 20px;
+}
+
+
+/* JUMBOTRON */
+
+#jumbo {
+    height: 300px;
+    background-color: #77A6F7 !important;
+    background-size: 100% 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: all ease .3s;
+}
+
+.jumbotron_caption {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #000;
+    z-index: 1;
+}
+
+.jumbotron_title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2em !important;
+    color: #f3f3ff !important;
+}
+
+.jumbotron_description {
+    line-height: 110%;
+    width: 100%;
+    padding-left: 5em;
+    padding-right: 5em;
+    font-size: 1.35em;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.col-sm-3 {
+    padding: 20x 50px 20px 50px;
+}
+
+#position,
+#loc,
+#dc,
+#hide {
+    font-size: 1em;
+    text-align: start;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 3px;
+    color: #212121;
+    margin: 0;
+}
+
+.input-search {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff !important;
+    padding-left: 5px;
+    transition: box-shadow 300ms ease-out;
+}
+
+#position-input {
+    background: url("../img/position.png") no-repeat;
+    background-position: left;
+    background-position-x: 93%;
+    background-size: 20px;
+}
+
+#loc-input {
+    background: url("../img/location.png") no-repeat;
+    background-position: left;
+    background-position-x: 93%;
+    background-size: 20px;
+}
+
+#dc-input {
+    background: url("../img/accessibility.png") no-repeat;
+    background-position: left;
+    background-position-x: 93%;
+    background-size: 20px;
+}
+
+.input-search:focus {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#position-input:focus {
+    background: url("../img/blue-position.png") no-repeat;
+    background-position: left;
+    background-position-x: 93%;
+    background-size: 20px;
+}
+
+#loc-input:focus {
+    background: url("../img/blue-location.png") no-repeat;
+    background-position: left;
+    background-position-x: 93%;
+    background-size: 20px;
+}
+
+#dc-input:focus {
+    background: url("../img/blue-accessibility.png") no-repeat;
+    background-position: left;
+    background-position-x: 93%;
+    background-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .jumbotron_title {
+        font-size: 1.5em !important;
+    }
+    .jumbotron_description {
+        font-size: 15px !important;
+    }
+    #position,
+    #loc,
+    #dc,
+    #hide {
+        font-size: .8em !important;
+    }
+    .search-area::before {
+        display: none !important;
+    }
+    .search-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .jumbotron {
+        height: auto !important;
+    }
+    #categories {
+        align-items: center;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .jumbotron_title {
+        font-size: 1em !important;
+    }
+    .jumbotron_description {
+        font-size: 12px !important;
+    }
+    #position,
+    #loc,
+    #dc,
+    #hide {
+        font-size: .5em !important;
+    }
+    .search-area {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .jumbotron {
+        height: auto !important;
+        padding-bottom: 60px !important;
+    }
+    #categories {
+        align-items: center;
+        margin-left: 20% !important;
+    }
+}

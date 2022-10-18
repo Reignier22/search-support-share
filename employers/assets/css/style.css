@@ -1,0 +1,382 @@
+/* Google Font Link */
+
+@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D3E3FC !important;
+    padding: 30px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    perspective: 2700px;
+}
+
+#home {
+    position: absolute;
+    background-color: #77A6F7;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+}
+
+#back {
+    position: absolute;
+    width: 170px;
+    height: 30px;
+    background-color: #77A6F7;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    align-items: center;
+    border-radius: 15px;
+    color: #fff;
+    white-space: nowrap;
+    visibility: hidden;
+}
+
+.container .cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.container #flip:checked~.cover {
+    transform: rotateY(-180deg);
+}
+
+.container .cover .front,
+.container .cover .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cover .back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container .cover::before,
+.container .cover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container .cover::after {
+    opacity: 0.3;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container .cover img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.container .cover .text {
+    position: absolute;
+    z-index: 130;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .cover button {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #333;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.container .cover button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.container .cover button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.container .cover button:hover span {
+    padding-right: 25px;
+    color: #000;
+    font-weight: 600;
+}
+
+.container .cover button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.cover .text .text-1,
+.cover .text .text-2 {
+    font-size: 26px;
+    color: #000;
+    text-align: center;
+}
+
+.cover .text .text-1 {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.cover .text .text-1 p {
+    font-size: small;
+}
+
+.cover .text .text-2 {
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.container .forms {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.container .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-content .login-form {
+    width: calc(100% / 2 - 50px);
+}
+
+.form-content .signup-form {
+    width: calc(100% / 2 - 20px);
+}
+
+.forms .form-content .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.forms .form-content p {
+    font-size: small;
+    color: #ccc;
+}
+
+.forms .form-content .password {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.forms .form-content .password .pass {
+    font-size: 14px;
+}
+
+.forms .form-content .password .pass a {
+    text-decoration: none;
+    color: #c3c3c3;
+}
+
+.forms .form-content .password .pass a:hover {
+    color: #77A6F7;
+}
+
+.forms .form-content .forgot {
+    text-align: right;
+    padding: 0;
+}
+
+.forms .form-content .check {
+    text-align: center;
+    font-size: 14px;
+    color: #c3c3c3;
+    cursor: pointer;
+}
+
+.forms .form-content .check a {
+    text-decoration: none;
+    color: #77A6F7;
+}
+
+.forms .form-content .check a:hover {
+    color: blue;
+}
+
+.forms .form-content .title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+}
+
+.forms .signup-form .title:before {
+    width: 20px;
+}
+
+.forms .form-content .input-boxes {
+    margin-top: 30px;
+}
+
+.forms .form-content .input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px;
+    position: relative;
+}
+
+.form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+    border-color: #77A6F7;
+}
+
+.form-content .input-box i {
+    position: absolute;
+    color: #77A6F7;
+    font-size: 17px;
+}
+
+.forms .form-content .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.forms .form-content .text a {
+    text-decoration: none;
+    color: #c3c3c3;
+}
+
+.forms .form-content .text a:hover {
+    color: #77A6F7;
+}
+
+.forms .form-content .button {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.forms .form-content .button input {
+    color: #fff;
+    background: #77A6F7;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.forms .form-content .button input:hover {
+    background: #77A6F7;
+}
+
+.forms .form-content label {
+    color: #77A6F7;
+    cursor: pointer;
+}
+
+.forms .form-content label:hover {
+    text-decoration: underline;
+}
+
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.container #flip {
+    display: none;
+}
+
+@media (max-width: 730px) {
+    .container .cover {
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form {
+        width: 100%;
+    }
+    .form-content .signup-form {
+        display: none;
+    }
+    .container #flip:checked~.forms .signup-form {
+        display: block;
+    }
+    .container #flip:checked~.forms .login-form {
+        display: none;
+    }
+}

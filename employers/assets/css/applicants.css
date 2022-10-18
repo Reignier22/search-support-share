@@ -1,0 +1,94 @@
+button {
+    color: #fff;
+}
+
+tbody tr td div .approved {
+    color: #24b83e;
+    font-weight: 900;
+}
+
+tbody tr td div .application {
+    color: #EC9706;
+    font-weight: 900;
+}
+
+tbody tr td div .reviewed {
+    color: #77A6F7;
+    font-weight: 900;
+}
+
+tbody tr td div .disapproved {
+    color: #b7262d;
+    font-weight: 900;
+}
+
+tbody tr td button {
+    background-color: transparent;
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+tbody tr td button a {
+    color: #000;
+    text-decoration: none;
+}
+
+tbody tr td button a span {
+    padding-left: 3px;
+}
+
+.yes {
+    background: #24b83e;
+}
+
+.no {
+    background: #b7262d;
+}
+
+button:hover,
+button a:hover {
+    background-color: #77A6F7;
+    color: #fff;
+    text-decoration: none;
+}
+
+button i {
+    font-size: large;
+    transition: ease-in-out .1s;
+}
+
+.tip {
+    position: relative;
+    display: inline-block;
+}
+
+.tip .tiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 100;
+    bottom: 120%;
+    left: 80%;
+    margin-left: -60px;
+}
+
+.tip .tiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tip:hover .tiptext {
+    visibility: visible;
+}
